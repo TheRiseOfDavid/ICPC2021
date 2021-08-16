@@ -1,0 +1,65 @@
+\documentclass[10pt]{article}
+\usepackage{CJKutf8}
+\usepackage[left=0.4in,right=0.4in,top=0.7in,bottom=0.4in]{geometry}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tocloft}
+\usepackage{pdflscape}
+\usepackage{multicol}
+
+\renewcommand*{\ttdefault}{pcr}
+\renewcommand\cftsecfont{\fontsize{8}{9}\bfseries}
+\renewcommand\cftsecpagefont{\fontsize{8}{9}\mdseries}
+\renewcommand\cftsubsecfont{\fontsize{5}{6}\mdseries}
+\renewcommand\cftsubsecpagefont{\fontsize{5}{6}\mdseries}
+\renewcommand\cftsecafterpnum{\vspace{-1ex}}
+\renewcommand\cftsubsecafterpnum{\vspace{-1ex}}
+
+\lstdefinestyle{shared}{
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+	xleftmargin=\parindent,
+	showstringspaces=false,
+	basicstyle=\fontsize{5.5}{6}\ttfamily,
+	extendedchars=false,
+	texcl,
+	escapebegin=\obeyspaces,
+}
+\lstdefinestyle{cpp}{
+	style=shared,
+	language=C++,
+	keywordstyle=\bfseries\color{green!40!black},
+	commentstyle=\itshape\color{red!80!black},
+	identifierstyle=\color{blue},
+	stringstyle=\color{purple!40!black},	
+}
+
+\begin{document}
+	\begin{CJK}{UTF8}{bsmi}
+		\begin{lstlisting}[style=cpp]
+			#include <iostream>
+			#include <bits/stdc++.h>
+			#define LOCAL
+			#define int long long
+			#define MAXN 70
+			using namespace std;
+			int dp[MAXN][MAXN][2];
+			int n, s;
+			
+			// 大衛
+			int32_t main()
+			{
+				#ifdef LOCAL
+				freopen("in1.txt", "r", stdin);
+				freopen("out.txt", "w", stdout);
+				#endif // LOCAL
+				
+			}
+			return 0;
+		}
+	\end{lstlisting}
+	
+\end{CJK}
+\end{document}

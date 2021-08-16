@@ -1,0 +1,6 @@
+* 求 Farey sequences(Fn) 的第 k 個分數
+* 利用遞推式不斷求出新的數值
+    * 遞推式 : 
+        * $num = \dfrac{n + b1}{b2};$
+        a3 = num * a2 - a1;
+        b3 = num * b2 - b1;

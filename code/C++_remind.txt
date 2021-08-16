@@ -1,0 +1,21 @@
+# 易忘的內建函數
+## 輸入輸出
+* gets(char*)
+* sscanf(char*, "%d:%d:%d %lf", &h, &m, &s, &speed_new)
+%d 表示 int
+%lf 表示 double
+* printf("%.2d:%.2d:%.2d %.2lf km\n",h,m,s,din)
+.2 表示保留 2 位小數(%d 是整數，會自動捨去小數)
+
+### 資料型別
+* string = to_string(int)
+* int = atoi(string.c_str())
+
+### 運算
+* lower_bound(begin, end, num)
+    * 從陣列的 begin 位置到 end - 1 位置二分查詢第一個大於或等於 num 的數字，找到返回該數字的地址，不存在則返回 end
+    * 通過返回的地址減去起始地址 begin，得到找到數字在陣列中的下標
+* __builtin_popcount(int)
+    * 回傳整數轉成二進值時所包含 1 的數量
+* ^
+    * 互斥或 xor 運算子
