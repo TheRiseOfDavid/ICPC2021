@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.8.16)  16 AUG 2021 21:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.8.16)  17 AUG 2021 01:49
 entering extended mode
 **./notebook.tex
 (notebook.tex
@@ -711,11 +711,11 @@ Package rerunfilecheck Info: File `notebook.out' has not changed.
 Here is how much of TeX's memory you used:
  13805 strings out of 478868
  195325 string characters out of 2862942
- 1351670 words of memory out of 3000000
+ 1351652 words of memory out of 3000000
  31105 multiletter control sequences out of 15000+600000
  440190 words of font info for 155 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,13n,80p,378b,1911s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,13n,80p,378b,1907s stack positions out of 5000i,500n,10000p,200000b,80000s
 {D:/tool/MiKTeX/fonts/enc/dvips/base/8r.enc}<D:/tool/MiKTeX/fonts/type1/arphi
 c/bsmiu/bsmiu30.pfb><D:/tool/MiKTeX/fonts/type1/arphic/bsmiu/bsmiu4e.pfb><D:/to
 ol/MiKTeX/fonts/type1/arphic/bsmiu/bsmiu4f.pfb><D:/tool/MiKTeX/fonts/type1/arph
@@ -764,7 +764,7 @@ eX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/tool/MiKTeX/fonts/type1/public
 cm/cmr8.pfb><D:/tool/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><D:/tool/MiKTeX/
 fonts/type1/urw/courier/ucrr8a.pfb><D:/tool/MiKTeX/fonts/type1/urw/courier/ucrr
 o8a.pfb>
-Output written on notebook.pdf (2 pages, 487710 bytes).
+Output written on notebook.pdf (2 pages, 487702 bytes).
 PDF statistics:
  660 PDF objects out of 1000 (max. 8388607)
  168 named destinations out of 1000 (max. 500000)
