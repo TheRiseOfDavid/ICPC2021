@@ -3,14 +3,14 @@
 using namespace std;
 
 // 斜率一樣代表平行或重合
-// m=dy/dx
+// $m=\dfrac{dy}{dx}$
+// $m1=m2\\\dfrac{dy1}{dx1}=\dfrac{dy2}{dx2}\\dy1*dx2=dy2*dx1$
 
 // 求兩直線交點
 // 利用正弦定理可知
-// - a/sin a = b/sin b=c/sin c = 2R
-//   a=(c * sin a) / sinc
-// 又 T=|u * b| / |a * b|}=|u|sin theta / |a|sin beta (sin theta=sin a)
-// 故 T* a= EB
+// $\dfrac{a}{\sin a}=\dfrac{b}{\sin b}=\dfrac{c}{\sin c}=2R\\a=\dfrac {c*sin a}{sinc}$
+// 又 $T=\frac{|\mathbf u\times \mathbf b|}{|\mathbf a\times \mathbf b|}=\frac{|\mathbf u|\sin \theta}{|\mathbf a|\sin \beta}$ ($\sin \theta=\sin a$)
+// 故 $T*\overrightarrow {\mathbf  a}=\overrightarrow {EB}$
 
 class Vector {
    private:
