@@ -1,9 +1,8 @@
-// * GCD(a~1~ + b~j~, …, a~n~ + b~j~)
-// = GCD(a[0] + b[j], a[1] - a[0], a[2] - a[1], ......, a[n - 2] - a[n - 3], a[n - 1] - a[n - 2])
-//     , a[0] < a[1] < a[2] < a[3]...
+// * $GCD(a_1 + b_j, …, a_n + b_j) = GCD(a[0] + b[j], a[1] - a[0], a[2] - a[1], ......, a[n - 2] - a[n - 3], a[n - 1] - a[n - 2])$
+// $a[0] < a[1] < a[2] < a[3]...$
 // 用法
-// * 因為只有 b~j~ 是不固定的，所以求 GCD(a~1~ + b~j~, …, a~n~ + b~j~) 就只要算 GCD(a[0] + b[j], baseGcd)
-//     * baseGcd = GCD(a[1] - a[0], a[2] - a[1], ......, a[n - 2] - a[n - 3], a[n - 1] - a[n - 2])
+// * 因為只有 b~j~ 是不固定的，所以求 $GCD(a_1 + b_j, …, a_n + b_j)$ 就只要算 $GCD(a[0] + b[j], baseGcd)$
+//     * $baseGcd = GCD(a[1] - a[0], a[2] - a[1], ......, a[n - 2] - a[n - 3], a[n - 1] - a[n - 2])$
 
 #include <iostream>
 #include <map>
