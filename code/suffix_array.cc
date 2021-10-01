@@ -14,7 +14,7 @@ int n , m , maxn , lenA , lenB , flag =0 ;
 string strA ;
 // 要進行 suffix array 的字串，請記住這裡的字串第一個 index 為 1
 
-void build_sa(){ //build suffix array
+void build_sa(){  //build suffix array
     int i , m , p , w ; 
     // 在這邊把常在迴圈使用的變數名稱拉出來宣告，以避免不斷宣告造成的效率浪費
     n = strA.length()-1 ; //減去 string[0] 的空格
@@ -59,7 +59,7 @@ void build_sa(){ //build suffix array
             if(oldrk[sa[i]] == oldrk[sa[i-1]] && 
                oldrk[sa[i] + w] == oldrk[sa[i-1] + w])
                //如果與前一個 rank 值是相同則理應現在應該也要相同
-               //最好範例：倍增排序圖示說明第一次排序的 rank[4~7], index 從 1 開始，
+               //最好範例：倍增排序圖示說明第一次排序的 rank[4 \~ 7], index 從 1 開始，
                //下方解釋 B 圖中
                 rk[sa[i]] = p ; //rank 字典排序不變
             else
@@ -67,14 +67,14 @@ void build_sa(){ //build suffix array
         }
     }
 
-//debug 輸出測試，以驗證是否正確
-//    cout << "Suffix Array is:\n" ;
-//    for(int i = 1 ; i <= n ; i++){
-//        cout << i << ' ' << strA.substr(sa[i]) << ' ' <<sa[i] << '\n' ;
-//    }
+    // debug 輸出測試，以驗證是否正確
+    //    cout << "Suffix Array is:\\n" ;
+    //    for(int i = 1 ; i <= n ; i++)
+    //        cout << i << ' ' << strA.substr(sa[i]) << ' ' <<sa[i] << '\\n' ;
+    //  
 }
 
-//最長共同前綴 Longest Common Prefix Array (LCP)
+// 最長共同前綴 Longest Common Prefix Array (LCP)
 // 定義 height = Longest Common Prefix Array
 // 道理其實相當簡單，我們的 Suffix Array 是字典排序，於是我們可以推出一公式 height[i]=lcp(sa[i],sa[i−1]，也就是讓第 i 名的後綴去跟前一名後綴算出最長共同前綴。
 
@@ -88,7 +88,7 @@ void build_sa(){ //build suffix array
 
 void build_lcp(){
     int lcp[N] = {} ;
-    int max_lcp = 0 ; // max_lcp 最大長度
+    int max_lcp = 0 ; // max\_lcp 最大長度
     //k 為現在 i 名的後綴與前一名後綴長度算出的最長共同前綴
     for(int i = 1 , k = 0 ; i <= n ; i++){
         if(k) k-- ; 
@@ -110,3 +110,4 @@ void build_lcp(){
             (sa[i] > lenA && sa[i-1] < n+1 && sa[i-1] < lenA))
             max_lcp = max(max_lcp , lcp[i]);
     }
+}

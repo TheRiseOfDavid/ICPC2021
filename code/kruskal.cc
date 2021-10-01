@@ -1,73 +1,62 @@
-//無向圖，之後生成 Minimum Spanning Tree (最小生成樹)
+// Kruskal Algorithm 介紹
+//
+// 主要是在一張圖中組合成一顆樹，其中每一條邊都有一個成本，且要求這顆樹的總和成本必須要是最小。
+// 時間複雜度為 O(ElogE)
+// 主要用來找出一張圖中的最小生成樹、最大生成樹
 
 #include <iostream>
 #include <bits/stdc++.h>
 #define LOCAL
-#define ll long long
+#define MAXN 200020
+#define int long long
 using namespace std;
-int parent[1020] ;
+int n, m;
+int a, b, c;
+int p[MAXN];
 
 struct edge{
-    ll n1 , n2 , w ;
-}node[25020];
-
-
-int compare(edge A , edge B ){
-    return A.w < B.w ;
-}
-
-
-int find_root(int a){
-    if(a != parent[a] )
-        return parent[a] = find_root(parent[a]) ;
-    return a ;
-}
-
-
-
-int main()
-{
-#ifdef LOCAL
-    freopen("in1.txt" , "r" , stdin );
-    freopen("out.txt" , "w" , stdout );
-#endif // LOCAL
-    int n , m , p_n1 , p_n2 ; // parent\_n1 , parent\_n2
-    vector<int> hce ; //heavy edge circle
-    while(cin >> n >> m && n + m != 0 ){
-        for(int i = 0 ; i < m ; i++ ){
-            cin >> node[i].n1 >> node[i].n2 >> node[i].w ;
-        }
-
-        for(int i = 0 ; i < n ; i++)
-            parent[i] = i ;
-        sort(node , node + m , compare ) ;
-        hce.clear() ;
-
-        //kruskal
-        for(int i = 0 ; i < m ; i++){
-            p_n1 = find_root(node[i].n1) ;
-            p_n2 = find_root(node[i].n2) ;
-            if(p_n1 != p_n2 )
-                parent[p_n2] = p_n1 ;
-            else
-                hce.push_back(node[i].w) ;
-
-            //debug
-            /**<
-            for(int i = 0 ; i < n ; i++)
-                cout << parent[i] << ' ' ;
-            cout << '\n' ;
-            */
-        }
-        sort(hce.begin() , hce.end()) ;
-        if(hce.size()){
-            for(int i = 0 ; i < hce.size()-1 ; i++)
-                cout << hce[i] << ' ' ;
-            cout << hce[hce.size()-1] ;
-        }
-        else
-            cout << "forest" ;
-        cout << '\n' ;
+    int u, v, c; //u,v 分別為邊的節點， c 是成本
+    
+    edge(): u(0), v(0), c(0) {}
+    edge(int u, int v, int c): u(u), v(v), c(c) {}
+    bool operator < (const edge& other) const{
+        return c < other.c;
     }
-    return 0;
+};
+vector<edge> node;
+vector<edge> MST; //最小生成樹
+
+int find_root(int x){
+    //cout << "find\_root " << x << "\\n";
+    if(p[x] != x) return p[x] = find_root(p[x]);
+    return x;
+}
+
+void kruskal(){
+    node.clear();
+    MST.clear();
+    for(int i = 0; i < n; i++) p[i] = i; //init disjoint set
+
+    for(int i = 0; i < m; i++){
+        cin >> a >> b >> c; //輸入邊、成本
+        node.push_back({a,b,c});
+    }
+    sort(node.begin(), node.end()); //排序，這邊排序方式為遞增
+
+    for(edge it: node){
+        //cout << it.u << " " << it.v << " " << it.c << "\\n";
+        //cout << p[3] << " " << p[4] << "\\n";
+        int pu = find_root(it.u); //判斷邊的節點們是否都在同個 set 
+        int pv = find_root(it.v);
+        if(pu != pv){ //分析 3-1
+                p[pv] = pu;
+                MST.push_back(it); //記錄此 edge
+        }
+    }
+
+    for(edge it: MST){
+        cout << it.u << " " << it.v << " " << it.c << "\n"; //輸出所有邊
+    }
+
+
 }

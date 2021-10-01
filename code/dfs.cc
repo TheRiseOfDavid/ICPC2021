@@ -12,7 +12,7 @@ int visit[20][20];
 int r, c, go;
 
 int dfs(int x, int y, int step){
-    //cout << x << " " << y << "\n";
+    //cout << x << " " << y << "\\n";
     if(x < 0 || x >= r || y < 0 || y >= c){ //判斷是否離開地圖
         cout << step << " step(s) to exit\n";
         return 0;

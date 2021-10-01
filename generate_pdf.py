@@ -27,6 +27,7 @@ def get_sections():
                 subsections.append((filename, subsection_name))
     return sections
 
+
 def get_style(filename):
     ext = filename.lower().split('.')[-1]
     if ext in ['c', 'cc', 'cpp']:
@@ -51,6 +52,7 @@ def get_tex(sections):
 
 if __name__ == "__main__":
     sections = get_sections()
+    
     tex = get_tex(sections)
     with open('contents.tex', 'w', encoding="utf8") as f:
         f.write(tex)

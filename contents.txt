@@ -7,7 +7,7 @@
 keyword.txt	關鍵字思考
 C++_basic.cc	C++ 基礎
 C++_remind.txt	C++ 易忘的內建函數
-python_big_int.py	python 內建大數、易錯事項
+python.py	python 常用
 
 [官-數學]
 find_divisor.cc	找因數
@@ -15,7 +15,6 @@ GCD.cc	公因數
 derivative.cc	求導數
 sum_of_product.txt	Sum of Product
 Farie_series.txt	法里數列
-
 
 [立委-幾何]
 Center_of_Masses_(Polygon).cc	Center of Masses (Polygon)
@@ -25,6 +24,10 @@ Intersection(Line_and_Point).cc	Intersection(Line and Point)
 Pack_Polygon_Circle.cc	Pack Polygon Circle
 Two_Point_and_Circle.cc	Two Point and Circle
 
+[立委-圖論]
+Li_Kruskal.cc	Kruskal
+Li_Shortest_Path.cc	Shortest Path
+
 [大衛-動態規劃]
 01_Knapsack_Problem.cc	背包問題
 LCS_ologn.cc	LCS 
@@ -33,9 +36,12 @@ Josephus_problem.cc	約瑟夫問題
 
 [大衛-圖論]
 floyd.cc	floyd 最短路徑
-kruskal.cc	最短生成樹
+kruskal.cc	最小生成樹
 graph_theorm_find_bridge.cc	找圖中的橋 find bridge
 Topological_Ordering.cc	拓樸排序
+Component_Kosaraju_Algorithm.cc	Component Kosaraju's Algorithm 找出 SCC
+Component_Tarjan_Algorithm.cc	Tarjan's Algorithm 找出 ACC
+dijkstra.cc	dijkstra
 
 [大衛-資料結構]
 Disjoint_Set.cc	並查集
@@ -46,6 +52,3 @@ KMP.cc	KMP
 Minimum_Edit_Distance.cc	最短修改距離
 Suffix_Automaton.cc	Suffix Automaton
 suffix_tree.cc	suffix tree
-
-
-
