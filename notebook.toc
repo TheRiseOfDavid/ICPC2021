@@ -26,17 +26,18 @@
 \contentsline {subsection}{\numberline {5.4}約瑟夫問題}{7}{subsection.5.4}%
 \contentsline {section}{\numberline {6}大衛-圖論}{7}{section.6}%
 \contentsline {subsection}{\numberline {6.1}floyd 最短路徑}{7}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}最小生成樹}{7}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.2}最小生成樹}{8}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}找圖中的橋 find bridge}{8}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}拓樸排序}{8}{subsection.6.4}%
 \contentsline {subsection}{\numberline {6.5}Component Kosaraju's Algorithm 找出 SCC}{8}{subsection.6.5}%
 \contentsline {subsection}{\numberline {6.6}Tarjan's Algorithm 找出 ACC}{9}{subsection.6.6}%
 \contentsline {subsection}{\numberline {6.7}dijkstra}{9}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}二分匹配、二分圖}{10}{subsection.6.8}%
 \contentsline {section}{\numberline {7}大衛-資料結構}{10}{section.7}%
 \contentsline {subsection}{\numberline {7.1}並查集}{10}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}線段樹}{10}{subsection.7.2}%
 \contentsline {section}{\numberline {8}大衛-字串}{11}{section.8}%
 \contentsline {subsection}{\numberline {8.1}KMP}{11}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}最短修改距離}{11}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Suffix Automaton}{11}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.3}Suffix Automaton}{12}{subsection.8.3}%
 \contentsline {subsection}{\numberline {8.4}suffix tree}{12}{subsection.8.4}%

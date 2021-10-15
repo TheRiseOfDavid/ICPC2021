@@ -1,7 +1,8 @@
 // \# Dijkstra’a Algorithm 介紹
 // 能夠針對有權重的有向圖做出單點全源最短路徑演算法。
 // 時間複雜度為 O((E+V)logV)，E 為邊、V 為頂點
-
+// * Dijkstra 變化題，可以擴增 dist
+// 如，dist[node][第n短路徑]、dist[node][奇偶數路徑]、可以走重複路徑時，則使用 visit[i]，來避免 deque 裡面有相同節點
 
 #include <iostream>
 #include <bits/stdc++.h>
